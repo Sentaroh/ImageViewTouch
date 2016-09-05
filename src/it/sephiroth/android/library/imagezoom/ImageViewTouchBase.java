@@ -280,8 +280,9 @@ public abstract class ImageViewTouchBase extends ImageView implements IDisposabl
 					} else {
 						if( Math.abs( old_scale - old_min_scale ) > 0.001 ) {
 							scale = ( old_matrix_scale / new_matrix_scale ) * old_scale;
+							zoomTo( scale ); //changed by F.Hoshino
 						}
-						zoomTo( scale );
+//						zoomTo( scale );
 					}
 					
 					if ( LOG_ENABLED ) {
